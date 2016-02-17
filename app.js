@@ -11,21 +11,6 @@ angular.module('MovieFinder', ['ngRoute'])
 			.when('/', {
 				//home page route
 				templateUrl: 'view/home.html'
-			})
-			.when('', {
-				//search movie detail page
-				controller:'',
-				templateUrl:'' 
-			})
-			.when('', {
-				//drop down category search page
-				controller: '',
-				templateUrl: ''
-			})
-			.when('', {
-				//single movie detail page
-				controller: '',
-				templateUrl: ''
 			});
 		})
 	.factory('', ['$http', function($http){
