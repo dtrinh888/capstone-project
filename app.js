@@ -1,9 +1,16 @@
 angular.module('MovieFinder', ['ngRoute'])
+	.constant('API_KEY', '990ba45b90f56c57b4e00a54fc773d8c')
+	.constant('BASE_URL', 'http://api.themoviedb.org/3/')
+	.constant('TOP_RATED_URL', 'movie/top_rated')
+	.constant('MOVIE_SEARCH_URL', 'search/movie')
+	.constant('MOVIE_DETAIL_PATH', 'movie/%s')
+	.constant('MOVIE_GENRE_URL', 'genre/movie/list')
+	.constant('SPECIFIC_GENRE_LIST_URL', 'discover/movie')
 	.config(function($routeProvider){
 		$routeProvider
 			.when('/', {
 				//home page route
-				templateUrl: ''
+				templateUrl: 'view/home.html'
 			})
 			.when('', {
 				//search movie detail page
@@ -33,3 +40,21 @@ angular.module('MovieFinder', ['ngRoute'])
 	.factory('', ['$http', function($http){
 		//
 	}])
+	.directive('movieDetail', function(){
+		return{
+			//movie-detail directive
+			templateUrl: 'movie-detail.html',
+			restrict: 'E',
+			transclude: false,
+			scope: true
+		};
+	})
+	.directive('genreDetail', function(){
+		return {
+			//genre-detail directive
+			templateUrl: 'genre-detail.html',
+			restrict: 'E',
+			transclude: false,
+			scope: true
+		};
+	})
