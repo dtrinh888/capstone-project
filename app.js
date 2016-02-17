@@ -11,7 +11,11 @@ angular.module('MovieFinder', ['ngRoute'])
 			.when('/', {
 				//home page route
 				templateUrl: 'view/home.html'
-			});
+			})
+			.when('/404', {
+				templateUrl: '<p>Error - Page Not Found</p>'
+			})
+			.otherwise('/404');
 		})
 	.factory('', ['$http', function($http){
 		//factory for home page displaying top rated movies of all time
