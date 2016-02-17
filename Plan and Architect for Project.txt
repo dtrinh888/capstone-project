@@ -1,0 +1,4 @@
+Plan and Architect for Project
+
+1. Define the Purpose of Your App: 
+	To let users search for movies and 

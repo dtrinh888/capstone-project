@@ -1,0 +1,19 @@
+{
+  "name": "capstone-project",
+  "version": "1.0.0",
+  "description": "final thinkful angular project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtrinh888/capstone-project.git"
+  },
+  "author": "David Trinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtrinh888/capstone-project/issues"
+  },
+  "homepage": "https://github.com/dtrinh888/capstone-project#readme"
+}
