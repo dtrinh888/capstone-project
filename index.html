@@ -3,14 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Movie Finder</title>
-	<link rel="stylesheet" type="text/css" href="bower_components/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 	<div class="container">
 		<a href="/#/">Home</a>
-		<a href="/#/movie-detail">Movie</a>
+		<a href="#/movie-detail">Movie</a>
 		<a href="/#/genre-detail">Genre</a>
+		<div ng-view></div>
 		<nav>
 			<h1>Movie Finder</h1>
 		</nav>
@@ -27,22 +28,22 @@
 	<script type="text/javascript" src="bower_components/angular-mocks/angular-mocks.js"></script>
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" src="js/genre-detail/genre-detail.contoller.js"></script>	
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="js/genre-detail/genre-detail.controller.js"></script>	
 	<script type="text/javascript" src="js/genre-detail/genre-detail.factory.js"></script>
 	<script type="text/javascript" src="js/genre-detail/genre-detail.route.js"></script>
 	<script type="text/javascript" src="js/genre-detail/genre-detail.directive.js"></script>
-	<script type="text/javascript" src="js/genre-list/genre-list.contoller.js"></script>	
+	<script type="text/javascript" src="js/genre-list/genre-list.controller.js"></script>	
 	<script type="text/javascript" src="js/genre-list/genre-list.factory.js"></script>
 	<script type="text/javascript" src="js/genre-list/genre-list.route.js"></script>
 	<script type="text/javascript" src="js/genre-list/genre-list.directive.js"></script>
-	<script type="text/javascript" src="js/movie-detail/movie.detail.controller.js"></script>
-	<script type="text/javascript" src="js/movie-detail/movie.detail.factory.js"></script>
-	<script type="text/javascript" src="js/movie-detail/movie.detail.route.js"></script>
-	<script type="text/javascript" src="js/movie-detail/movie.detail.directive.js"></script>
-	<script type="text/javascript" src="js/movie-search/movie.search.controller.js"></script>
-	<script type="text/javascript" src="js/movie-search/movie.search.factory.js"></script>
-	<script type="text/javascript" src="js/movie-search/movie.search.route.js"></script>
-	<script type="text/javascript" src="js/movie-search/movie.search.directive.js"></script>
+	<script type="text/javascript" src="js/movie-detail/movie-detail.controller.js"></script>
+	<script type="text/javascript" src="js/movie-detail/movie-detail.factory.js"></script>
+	<script type="text/javascript" src="js/movie-detail/movie-detail.route.js"></script>
+	<script type="text/javascript" src="js/movie-detail/movie-detail.directive.js"></script>
+	<script type="text/javascript" src="js/movie-search/movie-search.controller.js"></script>
+	<script type="text/javascript" src="js/movie-search/movie-search.factory.js"></script>
+	<script type="text/javascript" src="js/movie-search/movie-search.route.js"></script>
+	<script type="text/javascript" src="js/movie-search/movie-search.directive.js"></script>
 </body>
 </html>

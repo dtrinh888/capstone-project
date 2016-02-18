@@ -4,7 +4,7 @@ angular.module('MovieFinder', ['ngRoute'])
 	.config(function($routeProvider){
 		$routeProvider
 		.when('/genre-detail', {
-			templateUrl: './js/genre-detail/genre-detail.html',
+			templateUrl: 'js/genre-detail/genre-detail.html',
 			controller: 'GenreDetailCtrl'
 		});
 	});

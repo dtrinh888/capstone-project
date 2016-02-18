@@ -10,7 +10,7 @@ angular.module('MovieFinder', ['ngRoute'])
 		$routeProvider
 			.when('/', {
 				//home page route
-				templateUrl: 'view/home.html'
+				templateUrl: 'home/home.html'
 			})
 			.when('/404', {
 				templateUrl: '<p>Error - Page Not Found</p>'
