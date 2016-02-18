@@ -8,7 +8,7 @@ angular.module('MovieFinder', ['ngRoute'])
 	.constant('SPECIFIC_GENRE_LIST_URL', 'discover/movie')
 	.config(function($routeProvider){
 		$routeProvider
-			.when('/', {
+			.when('#/', {
 				//home page route
 				templateUrl: 'view/home.html'
 			})
