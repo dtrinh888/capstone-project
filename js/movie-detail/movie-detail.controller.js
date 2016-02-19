@@ -1,4 +1,4 @@
-angular.module('MovieFinder', ['ngRoute'])
-	.controller('MovieDetailCtrl', function($scope){
+angular.module('MovieFinder')
+	.controller('MovieDetailCtrl',['$scope', function($scope){
 		$scope.mdv = 'Movie Detail View';
-	});
+	}]);

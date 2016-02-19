@@ -6,17 +6,17 @@ angular.module('MovieFinder', ['ngRoute'])
 	.constant('MOVIE_DETAIL_PATH', 'movie/%s')
 	.constant('MOVIE_GENRE_URL', 'genre/movie/list')
 	.constant('SPECIFIC_GENRE_LIST_URL', 'discover/movie')
-	.config(function($routeProvider){
+	.config(['$routeProvider', function($routeProvider){
 		$routeProvider
 			.when('/', {
 				//home page route
-				templateUrl: 'home/home.html'
+				templateUrl: 'js/home/home.html'
 			})
 			.when('/404', {
 				templateUrl: '<p>Error - Page Not Found</p>'
 			})
 			.otherwise('/404');
-		})
+		}])
 	.factory('', ['$http', function($http){
 		//factory for home page displaying top rated movies of all time
 	}])
@@ -28,22 +28,5 @@ angular.module('MovieFinder', ['ngRoute'])
 	}])
 	.factory('', ['$http', function($http){
 		//
-	}])
-	.directive('movieDetail', function(){
-		return{
-			//movie-detail directive
-			templateUrl: 'movie-detail.html',
-			restrict: 'E',
-			transclude: false,
-			scope: true
-		};
-	})
-	.directive('genreDetail', function(){
-		return {
-			//genre-detail directive
-			templateUrl: 'genre-detail.html',
-			restrict: 'E',
-			transclude: false,
-			scope: true
-		};
-	})
+	}]);
+

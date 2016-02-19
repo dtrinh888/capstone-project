@@ -1,4 +1,4 @@
-angular.module('MovieFinder', ['ngRoute'])
-	.controller('GenreDetailCtrl', function($scope){
+angular.module('MovieFinder')
+	.controller('GenreDetailCtrl',['$scope', function($scope){
 		$scope.gdv = 'Genre Detail View';
-	});
+	}]);
