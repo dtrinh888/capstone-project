@@ -1,1 +1,1 @@
-angular.module('MovieFinder', ['ngRoute']);
+angular.module('MovieFinder');
