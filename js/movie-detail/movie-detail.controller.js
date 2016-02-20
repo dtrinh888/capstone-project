@@ -1,9 +1,7 @@
 angular.module('MovieFinder')
-	.controller('MovieDetailCtrl',['$scope', '$route', 'MovieDetailFactory', 'MovieSearchFactory', function($scope, $route, MovieDetailFactory, MovieSearchFactory){
+	.controller('MovieDetailCtrl',['$scope', '$route', 'MovieDetailFactory', function($scope, $route, MovieDetailFactory){
 		$scope.mdv = 'Movie Detail View';
-		$scope.movieDetail = function(){
-			MovieDetailFactory.get().then(function(movie){
-				console.log('MovieDetailCtrl', movie);
-			});
-		};
+		MovieDetailFactory($route.current.params.movieId).then(function(movie){
+			console.log('MovieDetailCtrl', movie);
+		});
 	}]);
