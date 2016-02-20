@@ -1,6 +1,3 @@
-<form>
-	<!-- movie search input -->
-	<input />
-	<!-- movie search submit -->
-	<button></button>
-</form>
+<div ng-controller="MovieSearchCtrl">
+	<autocomplete ng-model="query" data="movies" on-type="updateMovies" on-select="navigateMovie"></autocomplete>
+</div>

@@ -2,8 +2,9 @@
 
 angular.module('MovieFinder')
 	.config(['$routeProvider', function($routeProvider){
+		console.log('test');
 		$routeProvider
-			.when('/movie-detail', {
+			.when('/movie/:id', {
 				templateUrl: 'js/movie-detail/movie-detail.html',
 				controller: 'MovieDetailCtrl'
 			});
