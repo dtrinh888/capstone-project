@@ -1,9 +1,9 @@
 //config block to create routes specific to searched category from dropdown
 
-angular.module('MovieFinder')
+MovieFinder
 	.config(['$routeProvider',function($routeProvider){
 		$routeProvider
-		.when('/genre-detail', {
+		.when('/genre/:genreId', {
 			templateUrl: 'js/genre-detail/genre-detail.html',
 			controller: 'GenreDetailCtrl'
 		});

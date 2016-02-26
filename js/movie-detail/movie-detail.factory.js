@@ -1,6 +1,6 @@
 //Endpoint where i need to hit commented below
 //BASE_URL + MOVIE_DETAIL_URL.replace('%s', movieId)
-angular.module('MovieFinder')
+MovieFinder
 	.factory('MovieDetailFactory', ['$http', 'API_KEY', 'BASE_URL', 'MOVIE_DETAIL_URL', function($http, API_KEY, BASE_URL, MOVIE_DETAIL_URL){
 		return function(movieId){
 			console.log('movieId', movieId);

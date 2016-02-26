@@ -1,4 +1,14 @@
 <!-- movie detail view -->
 
 <h1>{{ mdv }}</h1>
-<img src="{{movieImg}}" />
+<div>
+	<img ng-src="{{movieImg}}" />
+	<div ng-repeat="genre in genres">
+		<a ng-href="/#/genre-detail/">{{genre.name}}</a>
+	</div>
+</div>
+<div ng-repeat="movie in similar" class="similar-movies">
+	<span>
+		<img ng-click="similarSelect(movie.id)" ng-src="{{movie.path}}" />
+	</span>
+</div>

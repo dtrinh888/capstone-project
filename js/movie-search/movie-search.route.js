@@ -1,1 +1,1 @@
-angular.module('MovieFinder');
+MovieFinder;

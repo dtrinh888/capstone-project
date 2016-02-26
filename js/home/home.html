@@ -1,14 +1,9 @@
 <!-- home view -->
 
-<h1>Home View</h1>
+<h1>{{home}}</h1>
+<div ng-repeat="topMovie in topRatedMovies" class="home-view">
+	<span>
+		<img ng-click="" ng-src="{{topMovie.path}}" />
+	</span>
+</div>
 
-<div ng-include="'js/movie-search/movie-search.html'">
-</div>
-<div ng-include="'js/movie-search/movie-search.html'">
-</div>
-<div ng-include="'js/movie-search/movie-search.html'">
-</div>
-<div ng-include="'js/movie-search/movie-search.html'">
-</div>
-<div ng-include="'js/movie-search/movie-search.html'">
-</div>

@@ -1,8 +1,6 @@
 <!-- genre dropdown view -->
-<div>
+<div ng-controller="GenreListCtrl">
 	<!-- genre dropdown box -->
-	<select>
-	<option>test</option>
-		<option>{{test}}</option>
+	<select ng-change="navigateGenre()" ng-options="genre as genre.name for genre in genreList" ng-model="selectedGenre" value=0>
 	</select>
 </div>

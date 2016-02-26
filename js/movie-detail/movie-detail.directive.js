@@ -1,4 +1,4 @@
-angular.module('MovieFinder')
+MovieFinder
 	.directive('movieDetail', function(){
 		return{
 			//movie-detail directive

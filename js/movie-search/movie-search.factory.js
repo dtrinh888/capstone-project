@@ -1,4 +1,4 @@
-angular.module('MovieFinder')
+MovieFinder
 	.factory('MovieSearchFactory', ['$http','API_KEY','BASE_URL', 'MOVIE_SEARCH_URL', function($http, API_KEY, BASE_URL, MOVIE_SEARCH_URL){
 		return function(query){
 			console.log('query', query);

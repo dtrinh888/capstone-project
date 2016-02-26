@@ -1,4 +1,4 @@
-angular.module('MovieFinder', ['ngRoute', 'autocomplete'])
+MovieFinder = angular.module('MovieFinder', ['ngRoute', 'autocomplete'])
 	.constant('API_KEY', '990ba45b90f56c57b4e00a54fc773d8c')
 	.constant('BASE_URL', 'http://api.themoviedb.org/3/')
 	.constant('TOP_RATED_URL', 'movie/top_rated')
@@ -6,11 +6,14 @@ angular.module('MovieFinder', ['ngRoute', 'autocomplete'])
 	.constant('MOVIE_DETAIL_URL', 'movie/%s')
 	.constant('MOVIE_GENRE_URL', 'genre/movie/list')
 	.constant('SPECIFIC_GENRE_LIST_URL', 'discover/movie')
+	.constant('GENRE_DETAIL_URL', 'genre/%s')
+	.constant('MOVIE_IMG_PATH', 'http://image.tmdb.org/t/p/w300/')
 	.config(['$routeProvider', function($routeProvider){
 		$routeProvider
 			.when('/', {
 				//home page route
-				templateUrl: 'js/home/home.html'
+				templateUrl: 'js/home/home.html',
+				controller: 'HomeCtrl'
 			})
 			.when('/404', {
 				templateUrl: '<p>Error - Page Not Found</p>'

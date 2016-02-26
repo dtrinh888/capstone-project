@@ -1,6 +1,6 @@
 //config block to create routes specific to searched movie
 
-angular.module('MovieFinder')
+MovieFinder
 	.config(['$routeProvider', function($routeProvider){
 		console.log('test');
 		$routeProvider

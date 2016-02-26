@@ -1,4 +1,4 @@
-angular.module('MovieFinder')
+MovieFinder
 	.controller('MovieSearchCtrl', ['$scope','MovieSearchFactory', '$location', function($scope, MovieSearchFactory, $location){
 		$scope.movies = [];
 		var titlesToId = {};

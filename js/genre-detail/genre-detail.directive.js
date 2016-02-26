@@ -1,4 +1,4 @@
-angular.module('MovieFinder')	
+MovieFinder
 	.directive('genreDetail', function(){
 		return {
 			//genre-detail directive

@@ -1,0 +1,37 @@
+.home-view {
+	display: inline-block;
+}
+
+.genre-detail-view {
+	display: inline-block;
+	width: 20%;
+	height: 300px;
+}
+
+.genre-detail-view img {
+	width: 185px;
+	height: 250px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.genre-detail-view span {
+
+}
+
+.title {
+	width: 185px;
+}
+
+.similar-movies {
+	display: inline-block;
+	cursor: pointer;
+	width: 9%;
+	height: 141px;
+}
+
+.similar-movies img {
+	width: 100%;
+	height: 100%;
+	padding: 10px 10px;
+}
