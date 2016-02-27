@@ -1,27 +1,51 @@
-.home-view {
-	display: inline-block;
+body{
+	width: 1000px;
+	margin: 0 auto;
 }
 
-.genre-detail-view {
-	display: inline-block;
-	width: 20%;
-	height: 300px;
+.container {
+	margin: 0 auto;
 }
 
-.genre-detail-view img {
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: yellow -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}
+
+.genre-detail-view, .home-view {
 	width: 185px;
+	height: 300px;
+	float: left;
+	margin: 5px 15px;
+}
+
+.genre-detail-view, .home-view img {
+	width: 100%;
 	height: 250px;
-	margin-top: 20px;
 	cursor: pointer;
 }
 
-.genre-detail-view span {
+.movie-img img{
+	width: 100%;
+}
+
+.movie-title, .movie-year, .movie-tagline {
 
 }
 
-.title {
-	width: 185px;
+.movie-tagline {
+	font-style: italic;
+	font-size: 12px;
+	font-weight: bold;
 }
+
 
 .similar-movies {
 	display: inline-block;
@@ -34,4 +58,8 @@
 	width: 100%;
 	height: 100%;
 	padding: 10px 10px;
+}
+
+.clear {
+	clear: both;
 }

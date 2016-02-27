@@ -1,14 +1,45 @@
 <!-- movie detail view -->
+<div class="well">
+	<div class="row">
+		<div class="col-md-4 movie-img page-header">
+			<img ng-src="{{movieImg}}" />
+		</div>
+		<div class="col-md-8">
+			<div>
+				<ul class="list-inline">
+					<li class="movie-title page-header"><h1>{{title}}</h1></li>
+					<li class="movie-year" ng-if="year"><p>({{year}})</p></li>
+				</ul>
+			</div>
+			<div>
+				<ul class="list-inline"> 
+					<li ng-if="genre.name" ng-repeat="genre in genres"><a ng-href="/#/genre/{{genre.id}}">{{genre.name}}{{$last ? '' : ', '}}</a></li>
+					<li>|</li>
+					<li ng-if="runtime">{{runtime}}min</li>
+					<li>|</li>
+					<li>{{release_date | date}}</li>
+				</ul>
+			</div>
+			<div>
+				<ul class="list-inline">
+					<li ng-if="ratings"><label>Ratings:</label> {{ratings}}/10</li>
+					<li><label>Vote Count: </label> {{votes | number}}</li>
+				</ul>
+			</div>
 
-<h1>{{ mdv }}</h1>
-<div>
-	<img ng-src="{{movieImg}}" />
-	<div ng-repeat="genre in genres">
-		<a ng-href="/#/genre-detail/">{{genre.name}}</a>
+			<hr>
+			<p ng-if="tagline" class="movie-tagline">"{{tagline}}"</p>
+			<label>Overview:</label> 
+			<p>{{overview}}</p>
+			<p><label>Revenue:</label><span> {{revenue | currency}}</span></p>
+			<p><label>Spoken Languages:</label><span ng-repeat="language in languages"> {{language}}{{$last ? '': ', '}}</span></p>
+		</div>
+	</div>	
+	<hr>
+	<div>
+		<h2>Similar Movies for {{title}}</h2>
+		<div ng-repeat="movie in similar" class="similar-movies">
+			<img ng-click="similarSelect(movie.id)" ng-src="{{movie.path}}" />
+		</div>
 	</div>
-</div>
-<div ng-repeat="movie in similar" class="similar-movies">
-	<span>
-		<img ng-click="similarSelect(movie.id)" ng-src="{{movie.path}}" />
-	</span>
 </div>

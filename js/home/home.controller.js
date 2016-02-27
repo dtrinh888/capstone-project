@@ -10,5 +10,8 @@ MovieFinder
 					path: MOVIE_IMG_PATH + topMovie.poster_path
 				});
 			});
+			$scope.topRatedSelect = function(movieId){
+				$location.path('/movie/' + movieId);
+			};
 		});
 	}]);

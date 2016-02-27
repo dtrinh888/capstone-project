@@ -16,7 +16,7 @@ MovieFinder = angular.module('MovieFinder', ['ngRoute', 'autocomplete'])
 				controller: 'HomeCtrl'
 			})
 			.when('/404', {
-				templateUrl: '<p>Error - Page Not Found</p>'
+				template: '<p>Error - Page Not Found</p>'
 			})
 			.otherwise('/404');
 		}]);
