@@ -1,14 +1,7 @@
 body{
 	width: 1000px;
 	margin: 0 auto;
-}
-
-.container {
-
-}
-
-.title {
-	
+	background-color: #EEEEEE;
 }
 
 hr {
@@ -23,11 +16,16 @@ hr {
 	margin: 18px 0;
 }
 
+.container {
+	background-color: white;
+}
+
 .navbar {
     color: #3A9425;
     background-color: black;
+    width: 100%;
+    margin: 0 auto;
 }
-
 
 .navigation a {
 	text-decoration: none;
@@ -36,10 +34,10 @@ hr {
 }
 
 .genre-detail-view, .home-view {
-	width: 185px;
+	width: 180px;
 	height: 300px;
 	float: left;
-	margin: 5px 15px;
+	margin: 5px;
 }
 
 .genre-detail-view img{
@@ -54,13 +52,8 @@ hr {
 	cursor: pointer;
 }
 
-.genre-content{
-	width: 850px;
-	margin: 0 auto;
-}
-
-.home-content {
-	width: 860px;
+.genre-content, .home-content {
+	width: 100%;
 	margin: 0 auto;	
 }
 .genre-dropdown select{
