@@ -10,13 +10,19 @@
 <body>
 	<div class="container col-lg-12">
 		
-		<nav class="page-header text-center jumbotron">
-			<a href="#/"><h1>Movie Finder</h1></a>
-			<movie-search></movie-search>
-			<genre-list></genre-list>
+		<nav class="navbar navbar-inverse text-center navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#/"><h1>Movie Finder</h1></a>
+				</div>
+				<movie-search></movie-search>
+				<genre-list></genre-list>
+			</div>	
+			
 		</nav>
-		<div class="well">
+		<div >
 			<mf-home></mf-home>
+			<genre-detail></genre-detail>
 			<div ng-view></div>
 		</div>
 	</div>

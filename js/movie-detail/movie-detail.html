@@ -1,13 +1,13 @@
 <!-- movie detail view -->
 <div class="">
 	<div class="row">
-		<div class="col-md-4 movie-img page-header">
-			<img ng-src="{{movieImg}}" />
+		<div class="col-md-4 movie-img" >
+			<img ng-if="movieImg" ng-src="{{movieImg}}" />
 		</div>
 		<div class="col-md-8">
 			<div>
 				<ul class="list-inline">
-					<li class="movie-title page-header"><h1>{{title}}</h1></li>
+					<li class="movie-title"><h1>{{title}}</h1></li>
 					<li class="movie-year" ng-if="year"><p>({{year}})</p></li>
 				</ul>
 			</div>
@@ -23,7 +23,7 @@
 			<div>
 				<ul class="list-inline">
 					<li ng-if="ratings"><label>Ratings:</label> {{ratings}}/10</li>
-					<li><label>Vote Count: </label> {{votes | number}}</li>
+					<li ng-if="votes"><label>Vote Count: </label> {{votes | number}}</li>
 				</ul>
 			</div>
 
@@ -31,12 +31,12 @@
 			<p ng-if="tagline" class="movie-tagline">"{{tagline}}"</p>
 			<label>Overview:</label> 
 			<p>{{overview}}</p>
-			<p><label>Revenue:</label><span> {{revenue | currency}}</span></p>
+			<p ng-if="revenue"><label>Revenue:</label><span> {{revenue | currency:undefined:0}}</span></p>
 			<p><label>Spoken Languages:</label><span ng-repeat="language in languages"> {{language}}{{$last ? '': ', '}}</span></p>
 		</div>
 	</div>	
-	<hr>
 	<div>
+		<hr>
 		<h2>Similar Movies for {{title}}</h2>
 		<div ng-repeat="movie in similar" class="similar-movies">
 			<img ng-click="similarSelect(movie.id)" ng-src="{{movie.path}}" />

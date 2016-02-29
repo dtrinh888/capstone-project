@@ -13,6 +13,7 @@ MovieFinder
 						titlesToId[movie.title] = movie.id;
 					});
 				});
+
 			}
 		};
 		$scope.navigateMovie = function(movieTitle){

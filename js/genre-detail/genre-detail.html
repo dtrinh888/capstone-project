@@ -1,9 +1,12 @@
 <!-- genre search view: show top 20 movies in genre -->
-
-<h1>{{ genre.name }}</h1>
-<div ng-repeat="movie in genreMovies" class="genre-detail-view">
-	<img ng-click="selectMovie(movie.id)" ng-src="{{movie.path}}">
-	<div class="title">
-		<p>{{movie.title}}</p>
-	</div>	
+<div class="genre-content">
+	<h1>{{ genre.name }}</h1>
+	<div class="row">
+		<div ng-repeat="movie in genreMovies" class="genre-detail-view">
+			<img ng-click="selectMovie(movie.id)" ng-src="{{movie.path}}">
+			<div class="text-center">
+				<p><a href="/#/movie/{{movie.id}}">{{movie.title}}</a></p>
+			</div>	
+		</div>
+	</div>
 </div>
