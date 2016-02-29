@@ -4,7 +4,7 @@ body{
 }
 
 .container {
-	margin: 0 auto;
+
 }
 
 .title {
@@ -22,6 +22,12 @@ hr {
 	border-width: 1px 0;
 	margin: 18px 0;
 }
+
+.navbar {
+    color: #3A9425;
+    background-color: black;
+}
+
 
 .navigation a {
 	text-decoration: none;
@@ -59,7 +65,12 @@ hr {
 }
 .genre-dropdown select{
 	width: 150px;
-	margin: 16px 175px;
+	height: 42px;
+	margin: 15px 175px;
+}
+
+.movie-content {
+	background-color: #FEF7CD;
 }
 
 .movie-img img{

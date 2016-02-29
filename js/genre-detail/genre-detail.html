@@ -1,6 +1,6 @@
 <!-- genre search view: show top 20 movies in genre -->
 <div class="genre-content">
-	<h1>{{ genre.name }}</h1>
+	<h2>{{ genre.name }}</h2>
 	<div class="row">
 		<div ng-repeat="movie in genreMovies" class="genre-detail-view">
 			<img ng-click="selectMovie(movie.id)" ng-src="{{movie.path}}">

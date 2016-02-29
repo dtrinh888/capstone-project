@@ -4,7 +4,7 @@
 		<div class="col-md-4 movie-img" >
 			<img ng-if="movieImg" ng-src="{{movieImg}}" />
 		</div>
-		<div class="col-md-8">
+		<div class="movie-content col-md-8">
 			<div>
 				<ul class="list-inline">
 					<li class="movie-title"><h1>{{title}}</h1></li>
@@ -14,9 +14,9 @@
 			<div>
 				<ul class="list-inline"> 
 					<li ng-if="genre.name" ng-repeat="genre in genres"><a ng-href="/#/genre/{{genre.id}}">{{genre.name}}{{$last ? '' : ', '}}</a></li>
-					<li>|</li>
+					<li ng-if="genres.length">|</li>
 					<li ng-if="runtime">{{runtime}}min</li>
-					<li>|</li>
+					<li ng-if="runtime">|</li>
 					<li>{{release_date | date}}</li>
 				</ul>
 			</div>
@@ -25,17 +25,16 @@
 					<li ng-if="ratings"><label>Ratings:</label> {{ratings}}/10</li>
 					<li ng-if="votes"><label>Vote Count: </label> {{votes | number}}</li>
 				</ul>
-			</div>
-
-			<hr>
+				<hr ng-if="release_date">
+			</div>	
 			<p ng-if="tagline" class="movie-tagline">"{{tagline}}"</p>
-			<label>Overview:</label> 
+			<label ng-if="overview">Overview:</label> 
 			<p>{{overview}}</p>
 			<p ng-if="revenue"><label>Revenue:</label><span> {{revenue | currency:undefined:0}}</span></p>
-			<p><label>Spoken Languages:</label><span ng-repeat="language in languages"> {{language}}{{$last ? '': ', '}}</span></p>
+			<p ng-if="languages.length"><label>Spoken Languages:</label><span ng-repeat="language in languages"> {{language}}{{$last ? '': ', '}}</span></p>
 		</div>
 	</div>	
-	<div>
+	<div ng-if="similar.length">
 		<hr>
 		<h2>Similar Movies for {{title}}</h2>
 		<div ng-repeat="movie in similar" class="similar-movies">
