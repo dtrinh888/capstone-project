@@ -12,7 +12,7 @@ MovieFinder
 				});
 			});
 			$scope.topRatedSelect = function(movieId){
-				$location.path('/movie/' + movieId);
+				$location.path('movie/' + movieId);
 			};
 		});
 	}]);
