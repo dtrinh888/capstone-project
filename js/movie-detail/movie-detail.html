@@ -34,7 +34,7 @@
 			<p ng-if="languages.length"><label>Spoken Languages:</label><span ng-repeat="language in languages"> {{language}}{{$last ? '': ', '}}</span></p>
 		</div>
 	</div>	
-	<div ng-if="similar.length">
+	<div ng-if="similar.length" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<hr>
 		<h2>Similar Movies for {{title}}</h2>
 		<div ng-repeat="movie in similar" class="similar-movies">

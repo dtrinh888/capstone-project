@@ -1,5 +1,4 @@
 body{
-	width: 1000px;
 	margin: 0 auto;
 	background-color: #EEEEEE;
 }
@@ -16,7 +15,7 @@ hr {
 	margin: 18px 0;
 }
 
-.container {
+.movies-container {
 	background-color: white;
 }
 
@@ -33,11 +32,11 @@ hr {
 	color: white;
 }
 
-.genre-detail-view, .home-view {
-	width: 184px;
+.genre-detail-view, .home-view {	
 	height: 300px;
-	float: left;
+	/*float: left;
 	margin: 5px;
+	width: 184px;*/
 }
 
 .genre-detail-view img{
@@ -57,9 +56,8 @@ hr {
 	margin: 0 auto;	
 }
 .genre-dropdown select{
-	width: 150px;
 	height: 42px;
-	margin: 15px 175px;
+	margin: 15px;
 }
 
 .movie-content {
@@ -71,7 +69,7 @@ hr {
 }
 
 .movie-search {
-	width: 250px;
+	width: 100%;
 	height: 10px;
 	float: left;
 	margin: 16px 10px;
@@ -86,12 +84,12 @@ hr {
 .similar-movies {
 	display: inline-block;
 	cursor: pointer;
-	width: 10%;
+	/*width: 10%;*/
 	height: 141px;
 }
 
 .similar-movies img {
-	width: 100%;
+	/*width: 100%;*/
 	height: 100%;
 	padding: 10px 10px;
 }
