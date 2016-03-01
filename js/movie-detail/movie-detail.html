@@ -13,7 +13,7 @@
 			</div>
 			<div>
 				<ul class="list-inline"> 
-					<li ng-if="genre.name" ng-repeat="genre in genres"><a ng-href="/#/genre/{{genre.id}}">{{genre.name}}{{$last ? '' : ', '}}</a></li>
+					<li ng-if="genre.name" ng-repeat="genre in genres"><a ng-href="#/genre/{{genre.id}}">{{genre.name}}{{$last ? '' : ', '}}</a></li>
 					<li ng-if="genres.length">|</li>
 					<li ng-if="runtime">{{runtime}}min</li>
 					<li ng-if="runtime">|</li>

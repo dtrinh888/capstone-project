@@ -5,7 +5,7 @@
 		<div ng-repeat="topMovie in topRatedMovies" class="home-view">
 			<img ng-click="topRatedSelect(topMovie.id)" ng-src="{{topMovie.path}}" />
 			<div class="text-center">
-				<p><a href="/#/movie/{{topMovie.id}}">{{topMovie.title}}</a></p>
+				<p><a ng-href="#/movie/{{topMovie.id}}">{{topMovie.title}}</a></p>
 			</div>
 		</div>
 	</div>

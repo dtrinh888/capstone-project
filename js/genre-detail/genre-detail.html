@@ -5,7 +5,7 @@
 		<div ng-repeat="movie in genreMovies" class="genre-detail-view">
 			<img ng-click="selectMovie(movie.id)" ng-src="{{movie.path}}">
 			<div class="text-center">
-				<p><a href="/#/movie/{{movie.id}}">{{movie.title}}</a></p>
+				<p><a ng-href="#/movie/{{movie.id}}">{{movie.title}}</a></p>
 			</div>	
 		</div>
 	</div>
