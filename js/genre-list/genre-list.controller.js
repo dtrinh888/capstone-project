@@ -12,7 +12,7 @@ MovieFinder
 		});
 		$scope.navigateGenre = function(){
 			if($scope.selectedGenre.id !== null){
-				$location.path('/genre/' + $scope.selectedGenre.id);
+				$location.path('genre/' + $scope.selectedGenre.id);
 				$scope.selectedGenre = $scope.genreList[0];
 			}
 		};

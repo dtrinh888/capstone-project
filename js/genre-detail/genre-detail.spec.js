@@ -3,7 +3,8 @@ describe('Genre Detail Routes', function(){
 
 	beforeEach(module('MovieFinder'));
 
-	it('should load the correct controller and template for Genre Detail route', inject(function($httpBackend, $rootScope, $route, $location){
+	it('should load the correct controller and template for Genre Detail route', 
+	inject(function($httpBackend, $rootScope, $route, $location){
 		$httpBackend.expect('GET', 'js/genre-detail/genre-detail.html').respond(200);
 
 		$rootScope.$apply(function(){
