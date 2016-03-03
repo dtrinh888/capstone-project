@@ -7,7 +7,7 @@ describe('Genre List Factory', function(){
 		var genreName;
 		var genreId;
 		GenreListFactory(35).then(function(results){
-			console.log('res',results);
+			//console.log('res',results);
 			genreName = results.data.name;
 			genreId = results.data.id;
 		});
