@@ -32,7 +32,7 @@ describe('Genre Detail Controller', function(){
 		$httpBackend.expect('GET', 'js/movie-detail/movie-detail.html').respond(200);
 		$httpBackend.expect('GET', 'js/genre-detail/genre-detail.html').respond(200);	
 
-		$rootScope.$apply(function(){
+    $rootScope.$apply(function(){
 			scope.selectMovie(240832);
 		});
 
