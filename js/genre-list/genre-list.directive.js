@@ -5,6 +5,5 @@ MovieFinder
 			templateUrl: 'js/genre-list/genre-list.html',
 			restrict: 'E',
 			transclude: true,
-/*			scope: true*/
 		};
 	});
