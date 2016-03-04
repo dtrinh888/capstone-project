@@ -21,8 +21,6 @@ describe('Genre Detail Controller', function(){
       GenreDetailFactory: GenreDetailFactory,
       $route: $route
     });
-
-    $location.path('/genre/18');
   }));
 
 	it('should route to movie when selectMovie is called', 
