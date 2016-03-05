@@ -22,7 +22,7 @@ describe('Genre Detail Controller', function(){
 		});
 	}));
 
-	fit('should route to correct movie when similarSelect() is fired', 
+	it('should route to correct movie when similarSelect() is fired', 
 	inject(function($httpBackend, $route, $rootScope){
 		$httpBackend.expect('JSONP', 'http://api.themoviedb.org/3/movie/undefined?api_key=990ba45b90f56c57b4e00a54fc773d8c&append_to_response=reviews,similar,rating,videos&callback=JSON_CALLBACK').respond(200);
 		$httpBackend.expect('GET', 'js/movie-detail/movie-detail.html').respond(200);

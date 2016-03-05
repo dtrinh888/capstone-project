@@ -1,4 +1,4 @@
-/*describe('Genre List Controller', function(){
+describe('Genre List Controller', function(){
 	var ctrl, scope;
 
 	beforeEach(module('MovieFinder'));
@@ -14,7 +14,7 @@
 			}
 		};
 
-		ctrl = $controller('GenreListController', {
+		ctrl = $controller('GenreListCtrl', {
 			$scope: scope,
 			$location: $location,
 			GenreListFactory: GenreListFactory,
@@ -22,12 +22,21 @@
 		});
 	}));
 
-	fit('should route to correct genre when navigateGenre() is called',
-	inject(function($httpBackend, $rootScope, $route){
-		$httpBackend.expect('JSONP', 'nba.com').respond(200);
-		$httpBackend.expect('GET', 'js/genre-list/genre-list.html').respond(200);
+	it('should route to correct genre when navigateGenre() is called',
+	inject(function($httpBackend, $rootScope, $route, $location){
+		$httpBackend.expect('JSONP', 'http://api.themoviedb.org/3/genre/movie/list?api_key=990ba45b90f56c57b4e00a54fc773d8c&callback=JSON_CALLBACK').respond(200);
+		$httpBackend.expect('GET', 'js/genre-detail/genre-detail.html').respond(200);
 
-		$rootScope.$apply();
+		$rootScope.$apply(function(){
+			$location.path('/genre/18');
+		});
+
+		/*$rootScope.$apply(function(){
+			scope.navigateGenre();
+		});*/
+
+		expect($route.current.originalPath).toBe('/genre/:genreId');
+		/*expect($route.current.params.genreId).toBe();*/
 
 	}));
-});*/
+});
