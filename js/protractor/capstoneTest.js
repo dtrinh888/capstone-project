@@ -21,12 +21,13 @@ describe('genre-detail', function(){
 });
 
 describe('movie-detail', function(){
-	fit('should have all elements in movie-detail page', function(){
+	it('should have all elements in movie-detail page', function(){
 		browser.get('http://dtrinh888.github.io/capstone-project/#/');
 		element(by.cssContainingText('a', 'Whiplash')).click();
 		expect(element.all(by.css('.movie-title h1')).count()).toBe(1);
 		expect(element(by.css('.movie-title h1')).getInnerHtml()).toMatch(/Whiplash/);
 		expect(element(by.css('.similar-movies h2')).getInnerHtml()).toMatch(/Similar Movies for Whiplash/);
+		expect(element.all(by.repeater('movie in similar')).count()).toBe(20);
 	});
 });
 
