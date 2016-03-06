@@ -14,6 +14,12 @@ describe('Home Controller', function(){
 			}
 		};
 
+		scope.topRatedSelect = {
+			id: 240832,
+			path: 'bar',
+			title: 'foo'
+		};
+
 		ctrl = $controller('HomeCtrl', {
 			$scope: scope,
 			$location: $location,

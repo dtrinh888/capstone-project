@@ -8,8 +8,10 @@ MovieFinder
 				//console.log(genre.name);
 				$scope.genreList.push(genre);
 			});
+			console.log('genreList', $scope.genreList);
 			$scope.selectedGenre = $scope.genreList[0];
 		});
+		console.log('genreList', $scope.genreList);
 		$scope.navigateGenre = function(){
 			if($scope.selectedGenre.id !== null){
 				$location.path('genre/' + $scope.selectedGenre.id);

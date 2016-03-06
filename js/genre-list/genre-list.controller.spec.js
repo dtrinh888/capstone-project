@@ -14,6 +14,11 @@ describe('Genre List Controller', function(){
 			}
 		};
 
+		scope.selectedGenre = {
+			id: scope.genreList[0],
+			name: 'Crime'
+		};
+
 		ctrl = $controller('GenreListCtrl', {
 			$scope: scope,
 			$location: $location,
@@ -31,12 +36,13 @@ describe('Genre List Controller', function(){
 			$location.path('/genre/18');
 		});
 
-		/*$rootScope.$apply(function(){
+		$rootScope.$apply(function(){
+			/*scope.selectedGenre.id = 80;*/
 			scope.navigateGenre();
-		});*/
+		});
 
 		expect($route.current.originalPath).toBe('/genre/:genreId');
-		/*expect($route.current.params.genreId).toBe();*/
+		expect(scope.selectedGenre.id).toBe('80');
 
 	}));
 });
