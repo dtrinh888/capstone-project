@@ -1,6 +1,11 @@
 MovieFinder
 	.controller('HomeCtrl', ['$scope', '$route', 'HomeFactory', 'MOVIE_IMG_PATH', '$location', function($scope, $route, HomeFactory, MOVIE_IMG_PATH, $location){
 		$scope.home = 'Most Popular on Movie Finder';
+		
+		$scope.topRatedSelect = function(movieId){
+			$location.path('/movie/' + movieId);
+		};
+		
 		HomeFactory().then(function(topMovieData){
 			console.log('topdata', topMovieData);
 			$scope.topRatedMovies = [];
@@ -11,8 +16,5 @@ MovieFinder
 					title: topMovie.title
 				});
 			});
-			$scope.topRatedSelect = function(movieId){
-				$location.path('/movie/' + movieId);
-			};
 		});
 	}]);

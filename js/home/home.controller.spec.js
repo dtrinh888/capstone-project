@@ -14,12 +14,6 @@ describe('Home Controller', function(){
 			}
 		};
 
-		scope.topRatedSelect = {
-			id: 240832,
-			path: 'bar',
-			title: 'foo'
-		};
-
 		ctrl = $controller('HomeCtrl', {
 			$scope: scope,
 			$location: $location,
@@ -28,7 +22,7 @@ describe('Home Controller', function(){
 		});
 	}));
 
-	fit('should route to the correct movie when topRatedSelect() is fired',
+	it('should route to the correct movie when topRatedSelect() is fired',
 	inject(function($httpBackend, $rootScope, $route, $location){
 		$httpBackend.expect('JSONP', 'http://api.themoviedb.org/3/movie/top_rated?api_key=990ba45b90f56c57b4e00a54fc773d8c&callback=JSON_CALLBACK').respond(200);
 		$httpBackend.expect('GET', 'js/movie-detail/movie-detail.html').respond(200);
